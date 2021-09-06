@@ -1,0 +1,2 @@
+library(car)
+head(Prestige)
