@@ -39,3 +39,41 @@ var4 <- seq(1, 10, by= 2)
 #seq(length='') from에서 to 까지 length만큼 쪼개기
 #seq(length.out='')
 ```
+
+
+### 2주차
+
+qqplot2 패키지 사용 해보기
+```r
+install.packages('ggplot2')
+library('ggplot2')
+
+x  <- c('a', 'b', 'c', 'c', 'd')
+
+qplot(x)
+#qplot(x, col, main)
+#qplot(data, x, y, geom, colour)
+qplot(data= car_mpg, x = manufacturer, y=drv, geom='boxplot', colour=='red')
+
+```
+
+![image](https://user-images.githubusercontent.com/46950334/133062564-680b13ae-8485-40dc-86df-f7ecea98e262.png) 
+![image](https://user-images.githubusercontent.com/46950334/133062844-e62e9a86-aaad-40f8-b725-5e9e446a99f7.png)
+
+
+각 변수 병합하기
+
+```r
+name <- c('김지훈', '이유진', '박동현', '김민지')
+eng <-  c(90, 20, 80, 15)
+math <- c(90, 10, 100, 20)
+
+df_score <- data.frame(name, eng, math)
+df_score
+
+#    name eng math
+#1 김지훈  90   90
+#2 이유진  20   10
+#3 박동현  80  100
+#4 김민지  15   20
+```
