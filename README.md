@@ -97,4 +97,7 @@ head(ex_exam)
 #4     4     1    30      98      58
 #5     5     2    25      80      65
 #6     6     2    50      89      98
+
+read_csv("excel_exam.csv")
+readRDS("excel_exam.rds")
 ```
