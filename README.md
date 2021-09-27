@@ -92,6 +92,7 @@ df_score <- data.frame(name=c('김지훈', '이유진', '박동현', '김민지'
 ### 9월 27일
 
 ##### excel 파일 불러오기
+```r
 install.packages('readxl')
 library(readxl)
 
@@ -112,6 +113,7 @@ read.csv("csv_exam.csv", stringsAsFactors = F) #문자가 들어 있는 파일�
 
 write.csv(df_score, file = "insert_name.csv") # csv 파일로 저장
 ```
+
 rds파일 저장 및 불러오기
 ```r
 readRDS("insert_name.rda")
