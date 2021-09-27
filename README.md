@@ -78,26 +78,41 @@ df_score
 #4 김민지  15   20
 ```
 
+```r
+df_score <- data.frame(name=c('김지훈', '이유진', '박동현', '김민지'),
+                        eng=c(90, 20, 80, 15),
+                        math=c(90, 10, 100, 20))
+#    name eng math
+#1 김지훈  90   90
+#2 이유진  20   10
+#3 박동현  80  100
+#4 김민지  15   20                        
+```
+
 ### 9월 27일
 
-excel파일 불러오기
-
-```r
+##### excel 파일 불러오기
 install.packages('readxl')
 library(readxl)
-ex_exam <- read_excel("excel_exam.xlsx")
 
+ex_exam <- read_excel("excel_exam.xlsx") 
+#col_names = F 첫 번쨰 행이 변수명이 아니면 삽입
+#sheet = n (n = sheet_cnt) 시트가 여러 개 있다면삽입
 ex_exam2 <- read_excel("/Users/jeonhyoseong/Downloads") #경로를 지정
-head(ex_exam)
-#     id class  math english science
-#  <dbl> <dbl> <dbl>   <dbl>   <dbl>
-#1     1     1    50      98      50
-#2     2     1    60      97      60
-#3     3     1    45      86      78
-#4     4     1    30      98      58
-#5     5     2    25      80      65
-#6     6     2    50      89      98
 
-read_csv("excel_exam.csv")
-readRDS("excel_exam.rds")
+readRDS("excel_exam.rds")   #rds파일 불러오기
+```
+##### csv 저장 및 불러오기
+* 범용 데이터 형식
+* 쉼표로 구분
+* 용량이 작다
+```r
+read.csv("excel_exam.csv")  #csv파일 불러오기
+read.csv("csv_exam.csv", stringsAsFactors = F) #문자가 들어 있는 파일을 불러올 떄
+
+write.csv(df_score, file = "insert_name.csv") # csv 파일로 저장
+```
+rds파일 저장 및 불러오기
+```r
+readRDS("insert_name.rda")
 ```
