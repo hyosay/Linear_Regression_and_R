@@ -118,3 +118,22 @@ rds파일 저장 및 불러오기
 ```r
 readRDS("insert_name.rda")
 ```
+
+
+## 중간고사 대비
+
+1. filter 사용 조건문 말 장난 조심
+-  초과, 미만, 이상, 이하, &, |
+
+2. %in% 로 변환하기
+```r
+#excel_Exam.csv 파일 사용
+var_1 %>% filter(class == 1 | class == 3 | class == 5)
+
+var_1 %>% filter(class %in% c(1, 3, 5)
+
+```
+
+
+
+
