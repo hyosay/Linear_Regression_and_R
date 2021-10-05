@@ -11,14 +11,13 @@ library('ggplot2')
 
 x <- c('a', 'd', 'c', 'c', 'd')
 x
-qplot(x, col='red', main= "빈도수")
-
+qplot(x, col='red', main= 'qplot')
 #car datasets
 library("car")
 
 a = mpg[1:10]
 a
-qplot(data = a, x= manufacturer, y= cty, geom= 'boxplot', colour='red')
+qplot(data = a, x= manufacturer, y=drv , geom= 'boxplot', colour='red')
 
 
 #1
@@ -38,7 +37,7 @@ eng <-  c(90, 20, 80, 15)
 math <- c(90, 10, 100, 20)
 
 ls <- data.frame(name, eng, math)
-
+ls
 class <- c(1, 2, 1, 2)
 
 # merge_data
