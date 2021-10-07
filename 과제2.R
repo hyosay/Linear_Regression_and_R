@@ -5,9 +5,9 @@ mpg <- as.data.frame(ggplot2::mpg)
 displ_4 <- mpg %>% filter(displ <= 4)
 displ_5 <- mpg %>%  filter(displ >= 5)
 
-mean(displ_4$displ)
-mean(displ_5$displ)
-# 배기량이 5 이상인 자동차가 연비가 5.578947이므로 더 높다.
+mean(displ_4$hwy)
+mean(displ_5$hwy)
+
 
 # Q2
 audi <- mpg %>% filter(manufacturer == 'audi')
